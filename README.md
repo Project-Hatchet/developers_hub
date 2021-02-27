@@ -14,25 +14,6 @@
 - Our vision is to make the most functional aircraft and ground vehicle that has ever been made in Arma, incorporating all of the lessons learned over the years. Our scope is modeling realistic vehicle interior interiors and cockpits that are fully interactive with clickable cockpits. We will focus on quality over mass production. We plan to achieve this by making all of our projects open-source and recruiting developers that share our vision (and are as sick as I am of blowing up randomly in modded helicopters while landing as I am ). We will focus on training and guiding new members through the difficulties of navigating modding in Arma. The end state of our project is educating and spreading knowledge across the multiple projects running simultaneously.
   
   
-## **Required for Beta testers**
-1. ### Game Engine  
-   1. [Arma 3](https://store.steampowered.com/app/107410/Arma_3/)
-
-2. ### Mods
-   1. [Hatchet H-60 pack](https://steamcommunity.com/sharedfiles/filedetails/?id=1745501605)
-   2. [Hatchet Framework](https://steamcommunity.com/workshop/filedetails/?id=1745501106)
-   3. [Ace 3](https://steamcommunity.com/workshop/filedetails/?id=463939057)
-   4. [CBA_A3](https://steamcommunity.com/workshop/filedetails/?id=450814997)
-
-## **Required for Developers**
-1. ### Beta testers Requirements 
-   1. [Arma 3 Tools](https://store.steampowered.com/app/233800/Arma_3_Tools/)
-   2. [Development environment]()
-
-
-
-
-
 
 ### About our Project
 1. [Bohemia Post](https://forums.bohemia.net/forums/topic/223859-h-60-interactive-blackhawk-pack-hh-60-pave-hawk-rescue-hoist/)
