@@ -10,39 +10,39 @@
 ## **Table of Contents** <!-- omit in toc --> 
 
 
-- [**About Us**](#about-us)
-  - [**Our Culture**](#our-culture)
-  - [**Benefits to contributing**](#benefits-to-contributing)
-  - [**Donations**](#donations)
-  - [Media on our Projects](#media-on-our-projects)
-- [**New Members**](#new-members)
-  - [Member standards](#member-standards)
-  - [Project sync ups](#project-sync-ups)
-  - [Creating Documenting](#creating-documenting)
-  - [Where to start](#where-to-start)
-- [**Developers**](#developers)
-  - [ACE coding standards](#ace-coding-standards)
-  - [Project standards](#project-standards)
-    - [make.py](#makepy)
-    - [make.cfg](#makecfg)
-    - [Setup.py](#setuppy)
-    - [**Workflow File's that need to be Changed when making a new repo**](#workflow-files-that-need-to-be-changed-when-making-a-new-repo)
-    - [**Non specific Workflow Automation**](#non-specific-workflow-automation)
-  - [Branching](#branching)
-- [Releases](#releases)
-  - [**Internal Testing**](#internal-testing)
-    - [Steps](#steps)
-    - [**release_dev.yml will do the following**](#release_devyml-will-do-the-following)
-  - [**Release Candidate**](#release-candidate)
-    - [**release_rc.yml will do the following**](#release_rcyml-will-do-the-following)
-  - [**main release**](#main-release)
-    - [**release_main.yml will do the following**](#release_mainyml-will-do-the-following)
-- [Setting up a project board with review tracking](#setting-up-a-project-board-with-review-tracking)
-- [Setting up a Development Enviorment](#setting-up-a-development-enviorment)
+- [1. **About Us**](#1-about-us)
+  - [1.1. **Our Culture**](#11-our-culture)
+  - [1.2. **Benefits to contributing**](#12-benefits-to-contributing)
+  - [1.3. **Donations**](#13-donations)
+  - [1.4. Media on our Projects](#14-media-on-our-projects)
+- [2. **New Members**](#2-new-members)
+  - [2.1. Member standards](#21-member-standards)
+  - [2.2. Project sync ups](#22-project-sync-ups)
+  - [2.3. Creating Documenting](#23-creating-documenting)
+  - [2.4. Where to start](#24-where-to-start)
+- [3. **Developers**](#3-developers)
+  - [3.1. ACE coding standards](#31-ace-coding-standards)
+  - [3.2. Project standards](#32-project-standards)
+    - [3.2.1. make.py](#321-makepy)
+    - [3.2.2. make.cfg](#322-makecfg)
+    - [3.2.3. Setup.py](#323-setuppy)
+    - [3.2.4. **Workflow File's that need to be Changed when making a new repo**](#324-workflow-files-that-need-to-be-changed-when-making-a-new-repo)
+    - [3.2.5. **Non specific Workflow Automation**](#325-non-specific-workflow-automation)
+  - [3.3. Branching](#33-branching)
+- [4. Releases](#4-releases)
+  - [4.1. **Internal Testing**](#41-internal-testing)
+    - [4.1.1. Steps](#411-steps)
+    - [4.1.2. **release_dev.yml will do the following**](#412-release_devyml-will-do-the-following)
+  - [4.2. **Release Candidate**](#42-release-candidate)
+    - [4.2.1. **release_rc.yml will do the following**](#421-release_rcyml-will-do-the-following)
+  - [4.3. **main release**](#43-main-release)
+    - [4.3.1. **release_main.yml will do the following**](#431-release_mainyml-will-do-the-following)
+- [5. Setting up a project board with review tracking](#5-setting-up-a-project-board-with-review-tracking)
+- [6. Setting up a Development Enviorment](#6-setting-up-a-development-enviorment)
 
 
 
-# **About Us**
+# 1. **About Us**
 - A few Arma mod developers got together in 2021 and started the open-source Project Hatchet Studio because we noticed a lack of quality interactive vehicle interiors and a lack of understanding of HUD elements. Arma 3 community. The actual Hatchet Project has been in development since 2018, with the original project the [h-60]( https://forums.bohemia.net/forums/topic/223859-h-60-interactive-blackhawk-pack-public-beta-03-released-development-restarted-join-our-discord/)
 
 - It all started with [ITC AIR]( https://steamcommunity.com/workshop/filedetails/?id=1321663083) and [ITC land]( https://steamcommunity.com/workshop/filedetails/?id=1388192893) with Yax creating Arma’s First IR aircraft pointer, which allowed aircraft to mark targets at night for the infantry. Another Arma first was making the Rover feed allowing ground units to see the Pod feed on fix winged air support assets. After working ITC, AIR/Land  Yax worked on the [F/A-18]( https://steamcommunity.com/sharedfiles/filedetails/?id=743099837) where he made an interactive cockpit and integrated ITC AIR., and wing flex during turning, not to mention numerous real-world and simulated weapon systems.   
@@ -51,7 +51,7 @@
   
   
 
-## **Our Culture**
+## 1.1. **Our Culture**
 - Real-life priorities need to take precedence first, Family, School, Work, and Mental Health.
 
 - Project Hatchet is an open-source hobby that we all do on the side of working/going to school full time. First and foremost, no one is getting paid in Project Hatchet Studios, so do not look at this as a job. It may develop into something more in the future; only time will tell.
@@ -59,14 +59,14 @@
 - There are no required work hours per day, per week, or month for that matter. If another developer is waiting on your commit, we ask that you complete it promptly.
 - If you need a break, let us know in Discord; it is acceptable to walk away from the project for six months or a year. Take the time you need. Just know someone will be reaching to you via Discord to check up on you and make sure you are okay. 
 
-## **Benefits to contributing**
+## 1.2. **Benefits to contributing**
 - Make better assets for the Arma community.  
 - Learn a new skill or get better at an existing one.
 - Understanding how the development process works, Arma is not an easy to start developing in we - can help you from making beginner mistakes.   
 - Use this for you CV and required job experience and build your reputation in your skill set.
 - Personal satisfaction 
 
-## **Donations**
+## 1.3. **Donations**
 - Time is the most valuable asset you can give, so we want to thank you for helping us along with our journey to complete our vision. 
 
 - We accept donations for the operating cost of running a server box that we share with an Arma unit. We use one instance on the server box to conduct private internal testing, and the second instance is used for public MP. 
@@ -78,14 +78,14 @@
 
 
 
-## Media on our Projects 
+## 1.4. Media on our Projects 
 1. [Bohemia Post](https://forums.bohemia.net/forums/topic/223859-h-60-interactive-blackhawk-pack-hh-60-pave-hawk-rescue-hoist/)
 2. [Helisimmer Article](https://www.helisimmer.com/news/arma-iii-uh-60m-interactive-blackhawk)
 3. [Current in-game video](https://www.youtube.com/watch?v=O5s4fXX1zZ0&feature=emb_lo)
    
-# **New Members**
+# 2. **New Members**
 
-## Member standards 
+## 2.1. Member standards 
   - Comunication works both ways
   - We can not solve an issue that we do not know about 
   - Every opinion maters in the team from the most senior to newest member.
@@ -95,20 +95,20 @@
   - Show results early and often, that is what the dev channel is there for. 
   - Bad news doesn't get better with time. 
 
-## Project sync ups
+## 2.2. Project sync ups
   - Getting the team together regularly to check progress, ask questions, and address any issues is another good way to keep everyone on track and assure that all team members are aware of their responsibilities in the project.
    
   - Make sure that the entire team knows the scope of the project and that each team member is clear about exactly what is expected of them.
   - No one can effectively complete an assignment if they are unsure what tasks they are responsible for
 
-## Creating Documenting
+## 2.3. Creating Documenting
   - You may  have implemented the most sophisticated system in the in all of arma, if its not documented both for users and developers no one will know about it or how it works.
   
   - Make documentation for each repository, both for users and developers, feel free to steal from this and use as much as possible.
   - Make an end use guide AKA how to use every system and key binding  
 
 
-## Where to start
+## 2.4. Where to start
 - Read this documentation 
 - Figure out how you want to contribute and communicate this in the discord under the developer chat.
   - **3D Modeling**
@@ -162,18 +162,18 @@
 
 
 
-# **Developers**
+# 3. **Developers**
 
-## ACE coding standards
+## 3.1. ACE coding standards
 - We use ACE coding standards which can be [here](https://ace3mod.com/wiki/development/coding-guidelines.html)
 - We use ACE development Enviorment for experienced Arma developers [here](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
   - For less experienced developers there we will have a through guide further down.  
 
-## Project standards
+## 3.2. Project standards
 
 - Replace the placeholder **PROJECT** in each file all in **lower case** and no special char's ie @$%&* only
 
-### make.py
+### 3.2.1. make.py
 - project = "@hatchet_PROJECT"
 - key_name = "hatchet_PROJECT"
 - prefix = "hatchet_PROJECT"
@@ -181,7 +181,7 @@
 - MAINPREFIX = "z"
 - PREFIX = "hatchet_PROJECT_"
   
-### make.cfg
+### 3.2.2. make.cfg
 - project = @hatchet_PROJECT
 - prefix = z\hatchet_PROJECT\addons
 - module_root = P:\z\hatchet_PROJECT\addons
@@ -191,7 +191,7 @@
 - -zipPrefix = hatchet_PROJECT
 - build_tool = pboproject
 
-### Setup.py
+### 3.2.3. Setup.py
 MAINDIR = "z"
 
 PROJECTDIR = "hatchet_PROJECT"
@@ -200,14 +200,14 @@ CBA = "P:\\x\\CBA_A3"
 
 ACE = "P:\\z\\ACE3"
 
-### **Workflow File's that need to be Changed when making a new repo** 
+### 3.2.4. **Workflow File's that need to be Changed when making a new repo** 
  - You need to go through workflow file
  - change **PROJECT** in each file all in **lower case** and no special char's ie @$%&* only
     - release_dev.yml hatchet_PROJECT_dev
     - release_main.yml hatchet_PROJECT_main
     - release_rc.yml hatchet_PROJECT_rc
 
-### **Non specific Workflow Automation**
+### 3.2.5. **Non specific Workflow Automation**
 
 - **build.yml 1st to run**
   - runs when pull requests to main branch
@@ -232,7 +232,7 @@ ACE = "P:\\z\\ACE3"
 - relies on a config file located in the root folder called my-config.yml
 
 
-## Branching
+## 3.3. Branching
 **We will follow the branching format**
 - **If Something needs to get added let Michael know more types can be added**
   - we may be able to condence the Types  
@@ -250,7 +250,7 @@ ACE = "P:\\z\\ACE3"
       - **Note: This is only git/github and will not be used in code** 
 
 <p align="left" >
-  <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/searching_type_frature.png">
+  <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/feature_search.png">
 </p>
 
   - **Types** 
@@ -291,12 +291,12 @@ ACE = "P:\\z\\ACE3"
        - update-electron-comparison
 
   
-# Releases 
+# 4. Releases 
 
-## **Internal Testing** 
+## 4.1. **Internal Testing** 
 <img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
 
-### Steps
+### 4.1.1. Steps
 - Issue gets created and is assigned an Type: Triage label
 - A senior developer Triage's the issue and assigns:
   - Priority 
@@ -307,7 +307,7 @@ ACE = "P:\\z\\ACE3"
   
 
 
-### **release_dev.yml will do the following**
+### 4.1.2. **release_dev.yml will do the following**
 - on push to main branch
 - builds addons with HEMTT
 - builds addons with HEMTT
@@ -318,23 +318,23 @@ ACE = "P:\\z\\ACE3"
 
 
 
-## **Release Candidate** 
+## 4.2. **Release Candidate** 
 <img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/release_candidate.jpg" >
 
 
 
 
-### **release_rc.yml will do the following**
+### 4.2.1. **release_rc.yml will do the following**
 - Build triggered by tag rc-v0.0.0
 - uploads public test version to the steam workshop
 
-## **main release**
+## 4.3. **main release**
 
 <img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/main_release.jpg">
 
 
 
-### **release_main.yml will do the following**
+### 4.3.1. **release_main.yml will do the following**
 - Build triggered by tag v0.0.0
 - builds stable version and uploads to steam
 
@@ -346,11 +346,11 @@ ACE = "P:\\z\\ACE3"
 
 
 
-# Setting up a project board with review tracking 
+# 5. Setting up a project board with review tracking 
 - TODO 
 
 
-# Setting up a Development Enviorment
+# 6. Setting up a Development Enviorment
 - TODO 
 
 
