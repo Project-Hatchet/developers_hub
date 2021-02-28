@@ -29,15 +29,30 @@
     - [3.2.4. **Workflow File's that need to be Changed when making a new repo**](#324-workflow-files-that-need-to-be-changed-when-making-a-new-repo)
     - [3.2.5. **Non specific Workflow Automation**](#325-non-specific-workflow-automation)
   - [3.3. Branching](#33-branching)
+    - [3.3.1. **Issues**](#331-issues)
+    - [3.3.2. **Descriptor**](#332-descriptor)
+    - [3.3.3. **Types**](#333-types)
+    - [3.3.4. **Default types**](#334-default-types)
+    - [3.3.5. **Branch Creation Format**](#335-branch-creation-format)
+    - [3.3.6. **Merging**](#336-merging)
 - [4. Releases](#4-releases)
   - [4.1. **Internal Testing**](#41-internal-testing)
-    - [4.1.1. Steps](#411-steps)
-    - [4.1.2. **release_dev.yml will do the following**](#412-release_devyml-will-do-the-following)
-  - [4.2. **Release Candidate**](#42-release-candidate)
-    - [4.2.1. **release_rc.yml will do the following**](#421-release_rcyml-will-do-the-following)
-  - [4.3. **main release**](#43-main-release)
-    - [4.3.1. **release_main.yml will do the following**](#431-release_mainyml-will-do-the-following)
+  - [4.2. **All issues will be tracked by a automated project board**](#42-all-issues-will-be-tracked-by-a-automated-project-board)
+    - [4.2.1. Steps](#421-steps)
+    - [4.2.2. **release_dev.yml will do the following**](#422-release_devyml-will-do-the-following)
+  - [4.3. **Release Candidate**](#43-release-candidate)
+    - [4.3.1. **release_rc.yml will do the following**](#431-release_rcyml-will-do-the-following)
+  - [4.4. **main release**](#44-main-release)
+    - [4.4.1. **release_main.yml will do the following**](#441-release_mainyml-will-do-the-following)
 - [5. Setting up a project board with review tracking](#5-setting-up-a-project-board-with-review-tracking)
+  - [5.1. Automation](#51-automation)
+  - [5.2. Whole Board Overview](#52-whole-board-overview)
+  - [5.3. Issues that need to be reviewed (triage)](#53-issues-that-need-to-be-reviewed-triage)
+  - [5.4. TODO/Ready to be assigned to a dev, Dev is Working AKA DOING](#54-todoready-to-be-assigned-to-a-dev-dev-is-working-aka-doing)
+  - [5.5. Pull request Submitted](#55-pull-request-submitted)
+  - [5.6. Pull request in progress](#56-pull-request-in-progress)
+  - [5.7. Review approved](#57-review-approved)
+  - [5.8. Done/merged into main](#58-donemerged-into-main)
 - [6. Setting up a Development Enviorment](#6-setting-up-a-development-enviorment)
 
 
@@ -235,79 +250,94 @@ ACE = "P:\\z\\ACE3"
 ## 3.3. Branching
 **We will follow the branching format**
 - **If Something needs to get added let Michael know more types can be added**
-  - we may be able to condence the Types  
-  
-- ### Issues 
+- we may be able to condense the Types  
+
+### 3.3.1. **Issues** 
   - Issue will be created by prior to a branch getting created
   - Branch will be created off of issues 
   - When a branch is PR is approved and merged intr 
 
 
-  - **Descriptor**
-    - Add a short descriptor of the task
-    - This makes the branch name recognizable and easy to **search**
-    - In descriptor we will use hyphens - to use instead of white space
-      - **Note: This is only git/github and will not be used in code** 
+### 3.3.2. **Descriptor**
+  - Add a short descriptor of the task
+  - This makes the branch name recognizable and easy to **search**
+  - In descriptor we will use hyphens - to use instead of white space
+  - **Note: This is only git/github and will not be used in code** 
 
-<p align="left" >
+<p  >
   <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/feature_search.png">
 </p>
 
-  - **Types** 
-    - This is the type of issue we are working on **all in lowercase**
-    - This is diffrent than the labels in Github 
-  
-    - **Default types**
-      - **feature**
-        - Adding a new feature
-      - **bugfix**
-        - A fix for a bug 
-      - **documentation**
-        - Adding or updating documentation
-      - **hotfix**
-        - critical bug fix
-      - **devops**
-        - updating a tool or workflow not related to 
-      - **model**
-        - an update to a model
-      - **texture**
-        - update to texture or rvmat
-      - **refactor**
-        - refactor of code to improve
-      - **release**
-        - Need to ask about this  could be useful   
-     
+### 3.3.3. **Types** 
+  - This is the type of issue we are working on **all in lowercase**
+  - This is diffrent than the labels in Github 
 
-  -  **Branch Creation Format**
-     - **Type**/**Descriptor**
+### 3.3.4. **Default types**
+  - **feature**
+    - Adding a new feature
+  - **bugfix**
+    - A fix for a bug 
+  - **documentation**
+    - Adding or updating documentation
+  - **hotfix**
+    - critical bug fix
+  - **devops**
+    - updating a tool or workflow not related to 
+  - **model**
+    - an update to a model
+  - **texture**
+    - update to texture or rvmat
+  - **refactor**
+    - refactor of code to improve
+  - **release**
+    - Need to ask about this  could be useful   
+   
+### 3.3.5. **Branch Creation Format**
 
-     - **Good examples**
-       - bugfix/dampeners
-       - feature/overhaul-flir-system
-       - feature/open-inspector
+   - **Type**/**Descriptor**
 
-     - **Bad examples**
-       - version1-breakpoint1
-       - update-electron-comparison
+   - **Good examples**
+     - bugfix/dampeners
+     - feature/overhaul-flir-system
+     - feature/open-inspector
+
+   - **Bad examples**
+     - version1-breakpoint1
+     - update-electron-comparison
+
+### 3.3.6. **Merging** 
+  - There are two options when merging **rebase** and **Squash Merge**
+    - Squash Merge is better when you commit frequent to a branch and want to clean up the history to show a single branch being added 
+    - Rebase is used to merge all of the commit and keep the commit history
+    - More can be read about types of merges ob the Github [Docs](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)  
 
   
 # 4. Releases 
 
 ## 4.1. **Internal Testing** 
-<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
+## 4.2. **All issues will be tracked by a automated project board** 
+<img  width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
 
-### 4.1.1. Steps
+### 4.2.1. Steps
 - Issue gets created and is assigned an Type: Triage label
+  
 - A senior developer Triage's the issue and assigns:
+  - **To a Project board** 
   - Priority 
   - Status
   - Role
+  
   - Experience level 
     - or will not fix and issue gets closed
+  - A developer will assign themselves a task and create a branch 
+  - Developer will work on the issue until is is complete and submit for a PR
+  - A code review will happen by a senior developer
+    - If Failed the developer will get notified
+    - IF passed the PR will be merged
+    - The PR will trigger an automated build process and release to steam
+    - the developer will be free to take a new task  
   
-
-
-### 4.1.2. **release_dev.yml will do the following**
+### 4.2.2. **release_dev.yml will do the following**
 - on push to main branch
 - builds addons with HEMTT
 - builds addons with HEMTT
@@ -318,36 +348,60 @@ ACE = "P:\\z\\ACE3"
 
 
 
-## 4.2. **Release Candidate** 
-<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/release_candidate.jpg" >
+## 4.3. **Release Candidate** 
+<img  width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/release_candidate.jpg" >
 
 
 
 
-### 4.2.1. **release_rc.yml will do the following**
+### 4.3.1. **release_rc.yml will do the following**
 - Build triggered by tag rc-v0.0.0
 - uploads public test version to the steam workshop
 
-## 4.3. **main release**
+## 4.4. **main release**
 
-<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/main_release.jpg">
+<img  width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/main_release.jpg">
 
 
 
-### 4.3.1. **release_main.yml will do the following**
+### 4.4.1. **release_main.yml will do the following**
 - Build triggered by tag v0.0.0
 - builds stable version and uploads to steam
 
-
-
-
-
-
-
-
-
 # 5. Setting up a project board with review tracking 
-- TODO 
+
+## 5.1. Automation
+- The following images will show the whole board and the automation
+- Project boards will be built for each release
+- There is no standard board that meets our need so feel free to pick the one that matches 
+  - Change the template to match the our standard 
+
+ ## 5.2. Whole Board Overview 
+<img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Whole%20Board.png">
+ 
+ ## 5.3. Issues that need to be reviewed (triage)
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Issues_to_be_reviewed.png">
+
+ ## 5.4. TODO/Ready to be assigned to a dev, Dev is Working AKA DOING
+- **No Automation**
+
+ <img  width="500" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Branch_created%20.png">
+
+ ## 5.5. Pull request Submitted 
+
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_inprogress.png">
+
+ ## 5.6. Pull request in progress 
+
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_review.png">
+
+ ## 5.7. Review approved 
+
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_approved%20png.png">
+
+ ## 5.8. Done/merged into main   
+
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Done_Merged.png">
 
 
 # 6. Setting up a Development Enviorment
@@ -359,7 +413,7 @@ ACE = "P:\\z\\ACE3"
 
 <!-- This is the code you need to align images to the left:
 
-<img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
+<img  width="100" height="100" src="http://www.fillmurray.com/100/100">
 
 This is the code you need to align images to the right:
 

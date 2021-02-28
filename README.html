@@ -58,30 +58,51 @@
 <li><a href="#325-non-specific-workflow-automation">3.2.5. <strong>Non specific Workflow Automation</strong></a></li>
 </ul>
 </li>
-<li><a href="#33-branching">3.3. Branching</a></li>
+<li><a href="#33-branching">3.3. Branching</a>
+<ul>
+<li><a href="#331-issues">3.3.1. <strong>Issues</strong></a></li>
+<li><a href="#332-descriptor">3.3.2. <strong>Descriptor</strong></a></li>
+<li><a href="#333-types">3.3.3. <strong>Types</strong></a></li>
+<li><a href="#334-default-types">3.3.4. <strong>Default types</strong></a></li>
+<li><a href="#335-branch-creation-format">3.3.5. <strong>Branch Creation Format</strong></a></li>
+<li><a href="#336-merging">3.3.6. <strong>Merging</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#4-releases">4. Releases</a>
 <ul>
-<li><a href="#41-internal-testing">4.1. <strong>Internal Testing</strong></a>
+<li><a href="#41-internal-testing">4.1. <strong>Internal Testing</strong></a></li>
+<li><a href="#42-all-issues-will-be-tracked-by-a-automated-project-board">4.2. <strong>All issues will be tracked by a automated project board</strong></a>
 <ul>
-<li><a href="#411-steps">4.1.1. Steps</a></li>
-<li><a href="#412-release_devyml-will-do-the-following">4.1.2. <strong>release_dev.yml will do the following</strong></a></li>
+<li><a href="#421-steps">4.2.1. Steps</a></li>
+<li><a href="#422-release_devyml-will-do-the-following">4.2.2. <strong>release_dev.yml will do the following</strong></a></li>
 </ul>
 </li>
-<li><a href="#42-release-candidate">4.2. <strong>Release Candidate</strong></a>
+<li><a href="#43-release-candidate">4.3. <strong>Release Candidate</strong></a>
 <ul>
-<li><a href="#421-release_rcyml-will-do-the-following">4.2.1. <strong>release_rc.yml will do the following</strong></a></li>
+<li><a href="#431-release_rcyml-will-do-the-following">4.3.1. <strong>release_rc.yml will do the following</strong></a></li>
 </ul>
 </li>
-<li><a href="#43-main-release">4.3. <strong>main release</strong></a>
+<li><a href="#44-main-release">4.4. <strong>main release</strong></a>
 <ul>
-<li><a href="#431-release_mainyml-will-do-the-following">4.3.1. <strong>release_main.yml will do the following</strong></a></li>
+<li><a href="#441-release_mainyml-will-do-the-following">4.4.1. <strong>release_main.yml will do the following</strong></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#5-setting-up-a-project-board-with-review-tracking">5. Setting up a project board with review tracking</a></li>
+<li><a href="#5-setting-up-a-project-board-with-review-tracking">5. Setting up a project board with review tracking</a>
+<ul>
+<li><a href="#51-automation">5.1. Automation</a></li>
+<li><a href="#52-whole-board-overview">5.2. Whole Board Overview</a></li>
+<li><a href="#53-issues-that-need-to-be-reviewed-triage">5.3. Issues that need to be reviewed (triage)</a></li>
+<li><a href="#54-todoready-to-be-assigned-to-a-dev-dev-is-working-aka-doing">5.4. TODO/Ready to be assigned to a dev, Dev is Working AKA DOING</a></li>
+<li><a href="#55-pull-request-submitted">5.5. Pull request Submitted</a></li>
+<li><a href="#56-pull-request-in-progress">5.6. Pull request in progress</a></li>
+<li><a href="#57-review-approved">5.7. Review approved</a></li>
+<li><a href="#58-donemerged-into-main">5.8. Done/merged into main</a></li>
+</ul>
+</li>
 <li><a href="#6-setting-up-a-development-enviorment">6. Setting up a Development Enviorment</a></li>
 </ul>
 <h1 id="1-about-us">1. <strong>About Us</strong></h1>
@@ -367,54 +388,31 @@
 <h2 id="33-branching">3.3. Branching</h2>
 <p><strong>We will follow the branching format</strong></p>
 <ul>
-<li>
-<p><strong>If Something needs to get added let Michael know more types can be added</strong></p>
-<ul>
-<li>we may be able to condence the Types</li>
+<li><strong>If Something needs to get added let Michael know more types can be added</strong></li>
+<li>we may be able to condense the Types</li>
 </ul>
-</li>
-<li>
-<h3 id="issues">Issues</h3>
+<h3 id="331-issues">3.3.1. <strong>Issues</strong></h3>
 <ul>
-<li>
-<p>Issue will be created by prior to a branch getting created</p>
-</li>
-<li>
-<p>Branch will be created off of issues</p>
-</li>
-<li>
-<p>When a branch is PR is approved and merged intr</p>
-</li>
-<li>
-<p><strong>Descriptor</strong></p>
+<li>Issue will be created by prior to a branch getting created</li>
+<li>Branch will be created off of issues</li>
+<li>When a branch is PR is approved and merged intr</li>
+</ul>
+<h3 id="332-descriptor">3.3.2. <strong>Descriptor</strong></h3>
 <ul>
 <li>Add a short descriptor of the task</li>
 <li>This makes the branch name recognizable and easy to <strong>search</strong></li>
-<li>In descriptor we will use hyphens - to use instead of white space
-<ul>
+<li>In descriptor we will use hyphens - to use instead of white space</li>
 <li><strong>Note: This is only git/github and will not be used in code</strong></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p align="left" >
+<p  >
   <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/feature_search.png">
 </p>
+<h3 id="333-types">3.3.3. <strong>Types</strong></h3>
 <ul>
-<li>
-<p><strong>Types</strong></p>
-<ul>
-<li>
-<p>This is the type of issue we are working on <strong>all in lowercase</strong></p>
-</li>
-<li>
-<p>This is diffrent than the labels in Github</p>
-</li>
-<li>
-<p><strong>Default types</strong></p>
+<li>This is the type of issue we are working on <strong>all in lowercase</strong></li>
+<li>This is diffrent than the labels in Github</li>
+</ul>
+<h3 id="334-default-types">3.3.4. <strong>Default types</strong></h3>
 <ul>
 <li><strong>feature</strong>
 <ul>
@@ -462,11 +460,7 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Branch Creation Format</strong></p>
+<h3 id="335-branch-creation-format">3.3.5. <strong>Branch Creation Format</strong></h3>
 <ul>
 <li>
 <p><strong>Type</strong>/<strong>Descriptor</strong></p>
@@ -487,28 +481,65 @@
 </ul>
 </li>
 </ul>
+<h3 id="336-merging">3.3.6. <strong>Merging</strong></h3>
+<ul>
+<li>There are two options when merging <strong>rebase</strong> and <strong>Squash Merge</strong>
+<ul>
+<li>Squash Merge is better when you commit frequent to a branch and want to clean up the history to show a single branch being added</li>
+<li>Rebase is used to merge all of the commit and keep the commit history</li>
+<li>More can be read about types of merges ob the Github <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges">Docs</a></li>
+</ul>
 </li>
 </ul>
 <h1 id="4-releases">4. Releases</h1>
 <h2 id="41-internal-testing">4.1. <strong>Internal Testing</strong></h2>
-<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
-<h3 id="411-steps">4.1.1. Steps</h3>
+<h2 id="42-all-issues-will-be-tracked-by-a-automated-project-board">4.2. <strong>All issues will be tracked by a automated project board</strong></h2>
+<img  width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
+<h3 id="421-steps">4.2.1. Steps</h3>
 <ul>
-<li>Issue gets created and is assigned an Type: Triage label</li>
-<li>A senior developer Triage's the issue and assigns:
+<li>
+<p>Issue gets created and is assigned an Type: Triage label</p>
+</li>
+<li>
+<p>A senior developer Triage's the issue and assigns:</p>
 <ul>
-<li>Priority</li>
-<li>Status</li>
-<li>Role</li>
-<li>Experience level
+<li>
+<p><strong>To a Project board</strong></p>
+</li>
+<li>
+<p>Priority</p>
+</li>
+<li>
+<p>Status</p>
+</li>
+<li>
+<p>Role</p>
+</li>
+<li>
+<p>Experience level</p>
 <ul>
 <li>or will not fix and issue gets closed</li>
 </ul>
 </li>
+<li>
+<p>A developer will assign themselves a task and create a branch</p>
+</li>
+<li>
+<p>Developer will work on the issue until is is complete and submit for a PR</p>
+</li>
+<li>
+<p>A code review will happen by a senior developer</p>
+<ul>
+<li>If Failed the developer will get notified</li>
+<li>IF passed the PR will be merged</li>
+<li>The PR will trigger an automated build process and release to steam</li>
+<li>the developer will be free to take a new task</li>
 </ul>
 </li>
 </ul>
-<h3 id="412-release_devyml-will-do-the-following">4.1.2. <strong>release_dev.yml will do the following</strong></h3>
+</li>
+</ul>
+<h3 id="422-release_devyml-will-do-the-following">4.2.2. <strong>release_dev.yml will do the following</strong></h3>
 <ul>
 <li>on push to main branch</li>
 <li>builds addons with HEMTT</li>
@@ -517,31 +548,55 @@
 <li>Uploads to steam workshop</li>
 <li>Only available to friends of the steam page</li>
 </ul>
-<h2 id="42-release-candidate">4.2. <strong>Release Candidate</strong></h2>
-<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/release_candidate.jpg" >
-<h3 id="421-release_rcyml-will-do-the-following">4.2.1. <strong>release_rc.yml will do the following</strong></h3>
+<h2 id="43-release-candidate">4.3. <strong>Release Candidate</strong></h2>
+<img  width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/release_candidate.jpg" >
+<h3 id="431-release_rcyml-will-do-the-following">4.3.1. <strong>release_rc.yml will do the following</strong></h3>
 <ul>
 <li>Build triggered by tag rc-v0.0.0</li>
 <li>uploads public test version to the steam workshop</li>
 </ul>
-<h2 id="43-main-release">4.3. <strong>main release</strong></h2>
-<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/main_release.jpg">
-<h3 id="431-release_mainyml-will-do-the-following">4.3.1. <strong>release_main.yml will do the following</strong></h3>
+<h2 id="44-main-release">4.4. <strong>main release</strong></h2>
+<img  width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/main_release.jpg">
+<h3 id="441-release_mainyml-will-do-the-following">4.4.1. <strong>release_main.yml will do the following</strong></h3>
 <ul>
 <li>Build triggered by tag v0.0.0</li>
 <li>builds stable version and uploads to steam</li>
 </ul>
 <h1 id="5-setting-up-a-project-board-with-review-tracking">5. Setting up a project board with review tracking</h1>
+<h2 id="51-automation">5.1. Automation</h2>
 <ul>
-<li>TODO</li>
+<li>The following images will show the whole board and the automation</li>
+<li>Project boards will be built for each release</li>
+<li>There is no standard board that meets our need so feel free to pick the one that matches
+<ul>
+<li>Change the template to match the our standard</li>
 </ul>
+</li>
+</ul>
+<h2 id="52-whole-board-overview">5.2. Whole Board Overview</h2>
+<img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Whole%20Board.png">
+<h2 id="53-issues-that-need-to-be-reviewed-triage">5.3. Issues that need to be reviewed (triage)</h2>
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Issues_to_be_reviewed.png">
+<h2 id="54-todoready-to-be-assigned-to-a-dev-dev-is-working-aka-doing">5.4. TODO/Ready to be assigned to a dev, Dev is Working AKA DOING</h2>
+<ul>
+<li><strong>No Automation</strong></li>
+</ul>
+ <img  width="500" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Branch_created%20.png">
+<h2 id="55-pull-request-submitted">5.5. Pull request Submitted</h2>
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_inprogress.png">
+<h2 id="56-pull-request-in-progress">5.6. Pull request in progress</h2>
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_review.png">
+<h2 id="57-review-approved">5.7. Review approved</h2>
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_approved%20png.png">
+<h2 id="58-donemerged-into-main">5.8. Done/merged into main</h2>
+ <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Done_Merged.png">
 <h1 id="6-setting-up-a-development-enviorment">6. Setting up a Development Enviorment</h1>
 <ul>
 <li>TODO</li>
 </ul>
 <!-- This is the code you need to align images to the left:
 
-<img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
+<img  width="100" height="100" src="http://www.fillmurray.com/100/100">
 
 This is the code you need to align images to the right:
 
