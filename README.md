@@ -217,8 +217,8 @@
 
 ### 3.2.2. Download and install Mikero tools
 
-1. [All in one installer ](https://mikero.bytex.digital/api/download?filename=pboProject.2.89.7.87.Installer.exe) 
-  
+1. [All in one installer ](https://mikero.bytex.digital/api/download?filename=Mikero%20AIO%20Install.exe) 
+
 2. Install all tools 
 
 ### 3.2.3. **Set up Pdrive**
