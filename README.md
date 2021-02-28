@@ -30,13 +30,14 @@
     - [**Non specific Workflow Automation**](#non-specific-workflow-automation)
   - [Branching](#branching)
 - [Releases](#releases)
-  - [Internal Testing](#internal-testing)
+  - [**Internal Testing**](#internal-testing)
     - [Steps](#steps)
-    - [**release_dev.yml will do the following **](#release_devyml-will-do-the-following-)
-  - [Release Candidate](#release-candidate)
-    - [**release_rc.yml**](#release_rcyml)
-  - [main release](#main-release)
-    - [**release_main.yml**](#release_mainyml)
+    - [**release_dev.yml will do the following**](#release_devyml-will-do-the-following)
+  - [**Release Candidate**](#release-candidate)
+    - [**release_rc.yml will do the following**](#release_rcyml-will-do-the-following)
+  - [**main release**](#main-release)
+    - [**release_main.yml will do the following**](#release_mainyml-will-do-the-following)
+- [Setting up a project board with review tracking](#setting-up-a-project-board-with-review-tracking)
 - [Setting up a Development Enviorment](#setting-up-a-development-enviorment)
 
 
@@ -292,7 +293,7 @@ ACE = "P:\\z\\ACE3"
   
 # Releases 
 
-## Internal Testing 
+## **Internal Testing** 
 <img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
 
 ### Steps
@@ -306,7 +307,7 @@ ACE = "P:\\z\\ACE3"
   
 
 
-### **release_dev.yml will do the following **
+### **release_dev.yml will do the following**
 - on push to main branch
 - builds addons with HEMTT
 - builds addons with HEMTT
@@ -317,19 +318,23 @@ ACE = "P:\\z\\ACE3"
 
 
 
-## Release Candidate 
+## **Release Candidate** 
+<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/release_candidate.jpg" >
 
 
 
 
-
-### **release_rc.yml**
+### **release_rc.yml will do the following**
 - Build triggered by tag rc-v0.0.0
 - uploads public test version to the steam workshop
 
-## main release
+## **main release**
 
-### **release_main.yml**
+<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/main_release.jpg">
+
+
+
+### **release_main.yml will do the following**
 - Build triggered by tag v0.0.0
 - builds stable version and uploads to steam
 
@@ -341,18 +346,12 @@ ACE = "P:\\z\\ACE3"
 
 
 
+# Setting up a project board with review tracking 
+- TODO 
 
 
-
-
-
-
-
-  
-  
-
-
-# Setting up a Development Enviorment 
+# Setting up a Development Enviorment
+- TODO 
 
 
 
