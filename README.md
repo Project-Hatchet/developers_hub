@@ -29,11 +29,13 @@
     - [**Workflow File's that need to be Changed when making a new repo**](#workflow-files-that-need-to-be-changed-when-making-a-new-repo)
     - [**Non specific Workflow Automation**](#non-specific-workflow-automation)
   - [Branching](#branching)
-- [Internal Testing](#internal-testing)
-    - [**release_dev.yml**](#release_devyml)
-- [Release Candidate](#release-candidate)
+- [Releases](#releases)
+  - [Internal Testing](#internal-testing)
+    - [Steps](#steps)
+    - [**release_dev.yml will do the following **](#release_devyml-will-do-the-following-)
+  - [Release Candidate](#release-candidate)
     - [**release_rc.yml**](#release_rcyml)
-- [main release](#main-release)
+  - [main release](#main-release)
     - [**release_main.yml**](#release_mainyml)
 - [Setting up a Development Enviorment](#setting-up-a-development-enviorment)
 
@@ -242,55 +244,69 @@ ACE = "P:\\z\\ACE3"
 
   - **Descriptor**
     - Add a short descriptor of the task
-    - This makes the branch name recognizable and easy to search
+    - This makes the branch name recognizable and easy to **search**
     - In descriptor we will use hyphens - to use instead of white space
       - **Note: This is only git/github and will not be used in code** 
 
-  - Types 
+<p align="left" >
+  <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/searching_type_frature.png">
+</p>
+
+  - **Types** 
     - This is the type of issue we are working on **all in lowercase**
     - This is diffrent than the labels in Github 
   
-    - Default types
-      - feature
+    - **Default types**
+      - **feature**
         - Adding a new feature
-      - bugfix
+      - **bugfix**
         - A fix for a bug 
-      - documentation
+      - **documentation**
         - Adding or updating documentation
-      - hotfix
+      - **hotfix**
         - critical bug fix
-      - devops
+      - **devops**
         - updating a tool or workflow not related to 
-      - model
+      - **model**
         - an update to a model
-      - texture
+      - **texture**
         - update to texture or rvmat
-      - refactor
+      - **refactor**
         - refactor of code to improve
       - **release**
         - Need to ask about this  could be useful   
      
 
-  -  Branch Creation Format
-     - Type/Descriptor
+  -  **Branch Creation Format**
+     - **Type**/**Descriptor**
 
-     - Good examples
+     - **Good examples**
        - bugfix/dampeners
        - feature/overhaul-flir-system
        - feature/open-inspector
 
-  
-     - Bad examples
+     - **Bad examples**
        - version1-breakpoint1
        - update-electron-comparison
 
   
+# Releases 
 
-# Internal Testing
+## Internal Testing 
+<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
+
+### Steps
+- Issue gets created and is assigned an Type: Triage label
+- A senior developer Triage's the issue and assigns:
+  - Priority 
+  - Status
+  - Role
+  - Experience level 
+    - or will not fix and issue gets closed
+  
 
 
-
-### **release_dev.yml**
+### **release_dev.yml will do the following **
 - on push to main branch
 - builds addons with HEMTT
 - builds addons with HEMTT
@@ -301,7 +317,7 @@ ACE = "P:\\z\\ACE3"
 
 
 
-# Release Candidate 
+## Release Candidate 
 
 
 
@@ -311,7 +327,7 @@ ACE = "P:\\z\\ACE3"
 - Build triggered by tag rc-v0.0.0
 - uploads public test version to the steam workshop
 
-# main release
+## main release
 
 ### **release_main.yml**
 - Build triggered by tag v0.0.0

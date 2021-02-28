@@ -61,9 +61,12 @@
 <li><a href="#branching">Branching</a></li>
 </ul>
 </li>
+<li><a href="#releases">Releases</a>
+<ul>
 <li><a href="#internal-testing">Internal Testing</a>
 <ul>
-<li><a href="#release_devyml"><strong>release_dev.yml</strong></a></li>
+<li><a href="#steps">Steps</a></li>
+<li><a href="#release_devyml-will-do-the-following-">**release_dev.yml will do the following **</a></li>
 </ul>
 </li>
 <li><a href="#release-candidate">Release Candidate</a>
@@ -74,6 +77,8 @@
 <li><a href="#main-release">main release</a>
 <ul>
 <li><a href="#release_mainyml"><strong>release_main.yml</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#setting-up-a-development-enviorment">Setting up a Development Enviorment</a></li>
@@ -383,7 +388,7 @@
 <p><strong>Descriptor</strong></p>
 <ul>
 <li>Add a short descriptor of the task</li>
-<li>This makes the branch name recognizable and easy to search</li>
+<li>This makes the branch name recognizable and easy to <strong>search</strong></li>
 <li>In descriptor we will use hyphens - to use instead of white space
 <ul>
 <li><strong>Note: This is only git/github and will not be used in code</strong></li>
@@ -391,8 +396,15 @@
 </li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<p align="left" >
+  <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/searching_type_frature.png">
+</p>
+<ul>
 <li>
-<p>Types</p>
+<p><strong>Types</strong></p>
 <ul>
 <li>
 <p>This is the type of issue we are working on <strong>all in lowercase</strong></p>
@@ -401,44 +413,44 @@
 <p>This is diffrent than the labels in Github</p>
 </li>
 <li>
-<p>Default types</p>
+<p><strong>Default types</strong></p>
 <ul>
-<li>feature
+<li><strong>feature</strong>
 <ul>
 <li>Adding a new feature</li>
 </ul>
 </li>
-<li>bugfix
+<li><strong>bugfix</strong>
 <ul>
 <li>A fix for a bug</li>
 </ul>
 </li>
-<li>documentation
+<li><strong>documentation</strong>
 <ul>
 <li>Adding or updating documentation</li>
 </ul>
 </li>
-<li>hotfix
+<li><strong>hotfix</strong>
 <ul>
 <li>critical bug fix</li>
 </ul>
 </li>
-<li>devops
+<li><strong>devops</strong>
 <ul>
 <li>updating a tool or workflow not related to</li>
 </ul>
 </li>
-<li>model
+<li><strong>model</strong>
 <ul>
 <li>an update to a model</li>
 </ul>
 </li>
-<li>texture
+<li><strong>texture</strong>
 <ul>
 <li>update to texture or rvmat</li>
 </ul>
 </li>
-<li>refactor
+<li><strong>refactor</strong>
 <ul>
 <li>refactor of code to improve</li>
 </ul>
@@ -453,13 +465,13 @@
 </ul>
 </li>
 <li>
-<p>Branch Creation Format</p>
+<p><strong>Branch Creation Format</strong></p>
 <ul>
 <li>
-<p>Type/Descriptor</p>
+<p><strong>Type</strong>/<strong>Descriptor</strong></p>
 </li>
 <li>
-<p>Good examples</p>
+<p><strong>Good examples</strong></p>
 <ul>
 <li>bugfix/dampeners</li>
 <li>feature/overhaul-flir-system</li>
@@ -467,7 +479,7 @@
 </ul>
 </li>
 <li>
-<p>Bad examples</p>
+<p><strong>Bad examples</strong></p>
 <ul>
 <li>version1-breakpoint1</li>
 <li>update-electron-comparison</li>
@@ -476,10 +488,26 @@
 </ul>
 </li>
 </ul>
+<h1 id="releases">Releases</h1>
+<h2 id="internal-testing">Internal Testing</h2>
+<img align="center" width="" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/workflow_and_automation/automation_workflow.jpg">
+<h3 id="steps">Steps</h3>
+<ul>
+<li>Issue gets created and is assigned an Type: Triage label</li>
+<li>A senior developer Triage's the issue and assigns:
+<ul>
+<li>Priority</li>
+<li>Status</li>
+<li>Role</li>
+<li>Experience level
+<ul>
+<li>or will not fix and issue gets closed</li>
+</ul>
 </li>
 </ul>
-<h1 id="internal-testing">Internal Testing</h1>
-<h3 id="release_devyml"><strong>release_dev.yml</strong></h3>
+</li>
+</ul>
+<h3 id="release_devyml-will-do-the-following-">**release_dev.yml will do the following **</h3>
 <ul>
 <li>on push to main branch</li>
 <li>builds addons with HEMTT</li>
@@ -488,13 +516,13 @@
 <li>Uploads to steam workshop</li>
 <li>Only available to friends of the steam page</li>
 </ul>
-<h1 id="release-candidate">Release Candidate</h1>
+<h2 id="release-candidate">Release Candidate</h2>
 <h3 id="release_rcyml"><strong>release_rc.yml</strong></h3>
 <ul>
 <li>Build triggered by tag rc-v0.0.0</li>
 <li>uploads public test version to the steam workshop</li>
 </ul>
-<h1 id="main-release">main release</h1>
+<h2 id="main-release">main release</h2>
 <h3 id="release_mainyml"><strong>release_main.yml</strong></h3>
 <ul>
 <li>Build triggered by tag v0.0.0</li>
