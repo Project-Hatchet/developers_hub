@@ -21,20 +21,27 @@
   - [2.3. Creating Documenting](#23-creating-documenting)
   - [2.4. Where to start](#24-where-to-start)
 - [3. **Developers**](#3-developers)
-  - [3.1. ACE coding standards](#31-ace-coding-standards)
-  - [3.2. Project standards](#32-project-standards)
-    - [3.2.1. make.py](#321-makepy)
-    - [3.2.2. make.cfg](#322-makecfg)
-    - [3.2.3. Setup.py](#323-setuppy)
-    - [3.2.4. **Workflow File's that need to be Changed when making a new repo**](#324-workflow-files-that-need-to-be-changed-when-making-a-new-repo)
-    - [3.2.5. **Non specific Workflow Automation**](#325-non-specific-workflow-automation)
-  - [3.3. Branching](#33-branching)
-    - [3.3.1. **Issues**](#331-issues)
-    - [3.3.2. **Descriptor**](#332-descriptor)
-    - [3.3.3. **Types**](#333-types)
-    - [3.3.4. **Default types**](#334-default-types)
-    - [3.3.5. **Branch Creation Format**](#335-branch-creation-format)
-    - [3.3.6. **Merging**](#336-merging)
+  - [3.1. **Setting up a Development Enviorment**](#31-setting-up-a-development-enviorment)
+  - [3.2. **Requirements**](#32-requirements)
+    - [3.2.1. **Installing Steam tools**](#321-installing-steam-tools)
+    - [3.2.2. Download and install Mikero tools](#322-download-and-install-mikero-tools)
+    - [3.2.3. **Set up Pdrive**](#323-set-up-pdrive)
+    - [3.2.4. **Auto Start Pdrive on start up**](#324-auto-start-pdrive-on-start-up)
+  - [3.3. **ACE coding standards**](#33-ace-coding-standards)
+  - [3.4. **File Patching (Diag.exe)**](#34-file-patching-diagexe)
+  - [3.5. Project standards](#35-project-standards)
+    - [3.5.1. make.py](#351-makepy)
+    - [3.5.2. make.cfg](#352-makecfg)
+    - [3.5.3. Setup.py](#353-setuppy)
+    - [3.5.4. **Workflow File's that need to be Changed when making a new repo**](#354-workflow-files-that-need-to-be-changed-when-making-a-new-repo)
+    - [3.5.5. **Non specific Workflow Automation**](#355-non-specific-workflow-automation)
+  - [3.6. Branching](#36-branching)
+    - [3.6.1. **Issues**](#361-issues)
+    - [3.6.2. **Descriptor**](#362-descriptor)
+    - [3.6.3. **Types**](#363-types)
+    - [3.6.4. **Default types**](#364-default-types)
+    - [3.6.5. **Branch Creation Format**](#365-branch-creation-format)
+    - [3.6.6. **Merging**](#366-merging)
 - [4. Releases](#4-releases)
   - [4.1. **Internal Testing**](#41-internal-testing)
   - [4.2. **All issues will be tracked by a automated project board**](#42-all-issues-will-be-tracked-by-a-automated-project-board)
@@ -53,7 +60,6 @@
   - [5.6. Pull request in progress](#56-pull-request-in-progress)
   - [5.7. Review approved](#57-review-approved)
   - [5.8. Done/merged into main](#58-donemerged-into-main)
-- [6. Setting up a Development Enviorment](#6-setting-up-a-development-enviorment)
 
 
 
@@ -179,16 +185,81 @@
 
 # 3. **Developers**
 
-## 3.1. ACE coding standards
+## 3.1. **Setting up a Development Enviorment**
+
+-If you want to actively develop to the code base, edit models or texture you will need to have a properly set up P drive.
+
+-Failing to follow to set up your p drive may appear to work but there will be unforeseen consequences.
+
+- Do not not set up you Pdrive any other way or follow othe guides floating around. 
+
+> “The definition of insanity is doing the same thing over and over again and expecting different results.”
+
+## 3.2. **Requirements** 
+  1. Arma 3
+  2. Arma 3 Tools
+  3. Mikero's Tools
+
+
+### 3.2.1. **Installing Steam tools**
+  1. Right click on the steam Icon and select library
+  2. Ensure tools is an option selected and search for arma 3 tools
+  3. Click instal on tools
+  4. In the Steam library Click play arma 3 tools and accept the licence  
+  5. Run one of the arma 3 tools (like Object builder)
+  
+  - Arma 3 Tools Setting up 
+    - click on preferences 
+    - unselect use defaults 
+    - give path to Arma 3 directory 
+        - ie. C:\Program Files (x86)\Steam\steamapps\common\Arma 3
+
+
+### 3.2.2. Download and install Mikero tools
+
+1. [All in one installer ](https://mikero.bytex.digital/api/download?filename=pboProject.2.89.7.87.Installer.exe) 
+  
+2. Install all tools 
+
+### 3.2.3. **Set up Pdrive**
+   - type in your windows search bar arma3p
+   - click the batch file 
+   - arma3p will create you virtual Pdrive and make a file to start it for you
+   - It will ask you what drive to setup and press p
+   - It will ask you if you want to unpack all data select N
+   - Arma 3 will begin to populate you Pdrive it will take awhile 
+
+### 3.2.4. **Auto Start Pdrive on start up** 
+  - press windows key + R
+  - copy
+    - shell:startup
+    - place in the run option
+  - copy 
+    - setPdrive.bat
+    - From the newly created p drive
+    - Place into the startup folder
+- Now when you start up your Computer your Pdrive will automation start  
+
+## 3.3. **ACE coding standards**
 - We use ACE coding standards which can be [here](https://ace3mod.com/wiki/development/coding-guidelines.html)
 - We use ACE development Enviorment for experienced Arma developers [here](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html)
-  - For less experienced developers there we will have a through guide further down.  
 
-## 3.2. Project standards
+
+## 3.4. **File Patching (Diag.exe)**
+1. Use Arma 3 Tools 
+   1. Game updater and install Development branch 
+   2. Download my [tool] https://github.com/Project-Hatchet/arma3diag_tool and follow the setup instructions 
+   3. [Arma 3 wiki](https://community.bistudio.com/wiki/Arma_3:_Diagnostics_Exe) 
+
+ 
+
+
+
+## 3.5. Project standards 
 
 - Replace the placeholder **PROJECT** in each file all in **lower case** and no special char's ie @$%&* only
 
-### 3.2.1. make.py
+### 3.5.1. make.py
 - project = "@hatchet_PROJECT"
 - key_name = "hatchet_PROJECT"
 - prefix = "hatchet_PROJECT"
@@ -196,7 +267,7 @@
 - MAINPREFIX = "z"
 - PREFIX = "hatchet_PROJECT_"
   
-### 3.2.2. make.cfg
+### 3.5.2. make.cfg
 - project = @hatchet_PROJECT
 - prefix = z\hatchet_PROJECT\addons
 - module_root = P:\z\hatchet_PROJECT\addons
@@ -206,7 +277,7 @@
 - -zipPrefix = hatchet_PROJECT
 - build_tool = pboproject
 
-### 3.2.3. Setup.py
+### 3.5.3. Setup.py
 MAINDIR = "z"
 
 PROJECTDIR = "hatchet_PROJECT"
@@ -215,14 +286,14 @@ CBA = "P:\\x\\CBA_A3"
 
 ACE = "P:\\z\\ACE3"
 
-### 3.2.4. **Workflow File's that need to be Changed when making a new repo** 
+### 3.5.4. **Workflow File's that need to be Changed when making a new repo** 
  - You need to go through workflow file
  - change **PROJECT** in each file all in **lower case** and no special char's ie @$%&* only
     - release_dev.yml hatchet_PROJECT_dev
     - release_main.yml hatchet_PROJECT_main
     - release_rc.yml hatchet_PROJECT_rc
 
-### 3.2.5. **Non specific Workflow Automation**
+### 3.5.5. **Non specific Workflow Automation**
 
 - **build.yml 1st to run**
   - runs when pull requests to main branch
@@ -247,18 +318,18 @@ ACE = "P:\\z\\ACE3"
 - relies on a config file located in the root folder called my-config.yml
 
 
-## 3.3. Branching
+## 3.6. Branching
 **We will follow the branching format**
 - **If Something needs to get added let Michael know more types can be added**
 - we may be able to condense the Types  
 
-### 3.3.1. **Issues** 
+### 3.6.1. **Issues** 
   - Issue will be created by prior to a branch getting created
   - Branch will be created off of issues 
   - When a branch is PR is approved and merged intr 
 
 
-### 3.3.2. **Descriptor**
+### 3.6.2. **Descriptor**
   - Add a short descriptor of the task
   - This makes the branch name recognizable and easy to **search**
   - In descriptor we will use hyphens - to use instead of white space
@@ -268,11 +339,11 @@ ACE = "P:\\z\\ACE3"
   <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/feature_search.png">
 </p>
 
-### 3.3.3. **Types** 
+### 3.6.3. **Types** 
   - This is the type of issue we are working on **all in lowercase**
   - This is diffrent than the labels in Github 
 
-### 3.3.4. **Default types**
+### 3.6.4. **Default types**
   - **feature**
     - Adding a new feature
   - **bugfix**
@@ -292,7 +363,7 @@ ACE = "P:\\z\\ACE3"
   - **release**
     - Need to ask about this  could be useful   
    
-### 3.3.5. **Branch Creation Format**
+### 3.6.5. **Branch Creation Format**
 
    - **Type**/**Descriptor**
 
@@ -305,7 +376,7 @@ ACE = "P:\\z\\ACE3"
      - version1-breakpoint1
      - update-electron-comparison
 
-### 3.3.6. **Merging** 
+### 3.6.6. **Merging** 
   - There are two options when merging **rebase** and **Squash Merge**
     - Squash Merge is better when you commit frequent to a branch and want to clean up the history to show a single branch being added 
     - Rebase is used to merge all of the commit and keep the commit history
@@ -404,8 +475,12 @@ ACE = "P:\\z\\ACE3"
  <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Done_Merged.png">
 
 
-# 6. Setting up a Development Enviorment
-- TODO 
+ 
+
+
+
+
+
 
 
 

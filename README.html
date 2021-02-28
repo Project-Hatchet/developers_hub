@@ -48,24 +48,34 @@
 </li>
 <li><a href="#3-developers">3. <strong>Developers</strong></a>
 <ul>
-<li><a href="#31-ace-coding-standards">3.1. ACE coding standards</a></li>
-<li><a href="#32-project-standards">3.2. Project standards</a>
+<li><a href="#31-setting-up-a-development-enviorment">3.1. <strong>Setting up a Development Enviorment</strong></a></li>
+<li><a href="#32-requirements">3.2. <strong>Requirements</strong></a>
 <ul>
-<li><a href="#321-makepy">3.2.1. make.py</a></li>
-<li><a href="#322-makecfg">3.2.2. make.cfg</a></li>
-<li><a href="#323-setuppy">3.2.3. Setup.py</a></li>
-<li><a href="#324-workflow-files-that-need-to-be-changed-when-making-a-new-repo">3.2.4. <strong>Workflow File's that need to be Changed when making a new repo</strong></a></li>
-<li><a href="#325-non-specific-workflow-automation">3.2.5. <strong>Non specific Workflow Automation</strong></a></li>
+<li><a href="#321-installing-steam-tools">3.2.1. <strong>Installing Steam tools</strong></a></li>
+<li><a href="#322-download-and-install-mikero-tools">3.2.2. Download and install Mikero tools</a></li>
+<li><a href="#323-set-up-pdrive">3.2.3. <strong>Set up Pdrive</strong></a></li>
+<li><a href="#324-auto-start-pdrive-on-start-up">3.2.4. <strong>Auto Start Pdrive on start up</strong></a></li>
 </ul>
 </li>
-<li><a href="#33-branching">3.3. Branching</a>
+<li><a href="#33-ace-coding-standards">3.3. <strong>ACE coding standards</strong></a></li>
+<li><a href="#34-file-patching-diagexe">3.4. <strong>File Patching (Diag.exe)</strong></a></li>
+<li><a href="#35-project-standards">3.5. Project standards</a>
 <ul>
-<li><a href="#331-issues">3.3.1. <strong>Issues</strong></a></li>
-<li><a href="#332-descriptor">3.3.2. <strong>Descriptor</strong></a></li>
-<li><a href="#333-types">3.3.3. <strong>Types</strong></a></li>
-<li><a href="#334-default-types">3.3.4. <strong>Default types</strong></a></li>
-<li><a href="#335-branch-creation-format">3.3.5. <strong>Branch Creation Format</strong></a></li>
-<li><a href="#336-merging">3.3.6. <strong>Merging</strong></a></li>
+<li><a href="#351-makepy">3.5.1. make.py</a></li>
+<li><a href="#352-makecfg">3.5.2. make.cfg</a></li>
+<li><a href="#353-setuppy">3.5.3. Setup.py</a></li>
+<li><a href="#354-workflow-files-that-need-to-be-changed-when-making-a-new-repo">3.5.4. <strong>Workflow File's that need to be Changed when making a new repo</strong></a></li>
+<li><a href="#355-non-specific-workflow-automation">3.5.5. <strong>Non specific Workflow Automation</strong></a></li>
+</ul>
+</li>
+<li><a href="#36-branching">3.6. Branching</a>
+<ul>
+<li><a href="#361-issues">3.6.1. <strong>Issues</strong></a></li>
+<li><a href="#362-descriptor">3.6.2. <strong>Descriptor</strong></a></li>
+<li><a href="#363-types">3.6.3. <strong>Types</strong></a></li>
+<li><a href="#364-default-types">3.6.4. <strong>Default types</strong></a></li>
+<li><a href="#365-branch-creation-format">3.6.5. <strong>Branch Creation Format</strong></a></li>
+<li><a href="#366-merging">3.6.6. <strong>Merging</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -103,7 +113,6 @@
 <li><a href="#58-donemerged-into-main">5.8. Done/merged into main</a></li>
 </ul>
 </li>
-<li><a href="#6-setting-up-a-development-enviorment">6. Setting up a Development Enviorment</a></li>
 </ul>
 <h1 id="1-about-us">1. <strong>About Us</strong></h1>
 <ul>
@@ -283,20 +292,98 @@
 </li>
 </ul>
 <h1 id="3-developers">3. <strong>Developers</strong></h1>
-<h2 id="31-ace-coding-standards">3.1. ACE coding standards</h2>
+<h2 id="31-setting-up-a-development-enviorment">3.1. <strong>Setting up a Development Enviorment</strong></h2>
+<p>-If you want to actively develop to the code base, edit models or texture you will need to have a properly set up P drive.</p>
+<p>-Failing to follow to set up your p drive may appear to work but there will be unforeseen consequences.</p>
 <ul>
-<li>We use ACE coding standards which can be <a href="https://ace3mod.com/wiki/development/coding-guidelines.html">here</a></li>
-<li>We use ACE development Enviorment for experienced Arma developers <a href="https://ace3mod.com/wiki/development/setting-up-the-development-environment.html">here</a>
+<li>Do not not set up you Pdrive any other way or follow othe guides floating around.</li>
+</ul>
+<blockquote>
+<p>“The definition of insanity is doing the same thing over and over again and expecting different results.”</p>
+</blockquote>
+<h2 id="32-requirements">3.2. <strong>Requirements</strong></h2>
+<ol>
+<li>Arma 3</li>
+<li>Arma 3 Tools</li>
+<li>Mikero's Tools</li>
+</ol>
+<h3 id="321-installing-steam-tools">3.2.1. <strong>Installing Steam tools</strong></h3>
+<ol>
+<li>Right click on the steam Icon and select library</li>
+<li>Ensure tools is an option selected and search for arma 3 tools</li>
+<li>Click instal on tools</li>
+<li>In the Steam library Click play arma 3 tools and accept the licence</li>
+<li>Run one of the arma 3 tools (like Object builder)</li>
+</ol>
 <ul>
-<li>For less experienced developers there we will have a through guide further down.</li>
+<li>Arma 3 Tools Setting up
+<ul>
+<li>click on preferences</li>
+<li>unselect use defaults</li>
+<li>give path to Arma 3 directory
+<ul>
+<li>ie. C:\Program Files (x86)\Steam\steamapps\common\Arma 3</li>
 </ul>
 </li>
 </ul>
-<h2 id="32-project-standards">3.2. Project standards</h2>
+</li>
+</ul>
+<h3 id="322-download-and-install-mikero-tools">3.2.2. Download and install Mikero tools</h3>
+<ol>
+<li>
+<p><a href="https://mikero.bytex.digital/api/download?filename=pboProject.2.89.7.87.Installer.exe">All in one installer </a></p>
+</li>
+<li>
+<p>Install all tools</p>
+</li>
+</ol>
+<h3 id="323-set-up-pdrive">3.2.3. <strong>Set up Pdrive</strong></h3>
+<ul>
+<li>type in your windows search bar arma3p</li>
+<li>click the batch file</li>
+<li>arma3p will create you virtual Pdrive and make a file to start it for you</li>
+<li>It will ask you what drive to setup and press p</li>
+<li>It will ask you if you want to unpack all data select N</li>
+<li>Arma 3 will begin to populate you Pdrive it will take awhile</li>
+</ul>
+<h3 id="324-auto-start-pdrive-on-start-up">3.2.4. <strong>Auto Start Pdrive on start up</strong></h3>
+<ul>
+<li>press windows key + R</li>
+<li>copy
+<ul>
+<li>shell:startup</li>
+<li>place in the run option</li>
+</ul>
+</li>
+<li>copy
+<ul>
+<li>setPdrive.bat</li>
+<li>From the newly created p drive</li>
+<li>Place into the startup folder</li>
+</ul>
+</li>
+<li>Now when you start up your Computer your Pdrive will automation start</li>
+</ul>
+<h2 id="33-ace-coding-standards">3.3. <strong>ACE coding standards</strong></h2>
+<ul>
+<li>We use ACE coding standards which can be <a href="https://ace3mod.com/wiki/development/coding-guidelines.html">here</a></li>
+<li>We use ACE development Enviorment for experienced Arma developers <a href="https://ace3mod.com/wiki/development/setting-up-the-development-environment.html">here</a></li>
+</ul>
+<h2 id="34-file-patching-diagexe">3.4. <strong>File Patching (Diag.exe)</strong></h2>
+<ol>
+<li>Use Arma 3 Tools
+<ol>
+<li>Game updater and install Development branch</li>
+<li>Download my [tool] <a href="https://github.com/Project-Hatchet/arma3diag_tool">https://github.com/Project-Hatchet/arma3diag_tool</a> and follow the setup instructions</li>
+<li><a href="https://community.bistudio.com/wiki/Arma_3:_Diagnostics_Exe">Arma 3 wiki</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="35-project-standards">3.5. Project standards</h2>
 <ul>
 <li>Replace the placeholder <strong>PROJECT</strong> in each file all in <strong>lower case</strong> and no special char's ie @$%&amp;* only</li>
 </ul>
-<h3 id="321-makepy">3.2.1. <a href="http://make.py">make.py</a></h3>
+<h3 id="351-makepy">3.5.1. <a href="http://make.py">make.py</a></h3>
 <ul>
 <li>project = &quot;@hatchet_PROJECT&quot;</li>
 <li>key_name = &quot;hatchet_PROJECT&quot;</li>
@@ -305,7 +392,7 @@
 <li>MAINPREFIX = &quot;z&quot;</li>
 <li>PREFIX = &quot;hatchet_PROJECT_&quot;</li>
 </ul>
-<h3 id="322-makecfg">3.2.2. make.cfg</h3>
+<h3 id="352-makecfg">3.5.2. make.cfg</h3>
 <ul>
 <li>project = @hatchet_PROJECT</li>
 <li>prefix = z\hatchet_PROJECT\addons</li>
@@ -316,12 +403,12 @@
 <li>-zipPrefix = hatchet_PROJECT</li>
 <li>build_tool = pboproject</li>
 </ul>
-<h3 id="323-setuppy">3.2.3. <a href="http://Setup.py">Setup.py</a></h3>
+<h3 id="353-setuppy">3.5.3. <a href="http://Setup.py">Setup.py</a></h3>
 <p>MAINDIR = &quot;z&quot;</p>
 <p>PROJECTDIR = &quot;hatchet_PROJECT&quot;</p>
 <p>CBA = &quot;P:\x\CBA_A3&quot;</p>
 <p>ACE = &quot;P:\z\ACE3&quot;</p>
-<h3 id="324-workflow-files-that-need-to-be-changed-when-making-a-new-repo">3.2.4. <strong>Workflow File's that need to be Changed when making a new repo</strong></h3>
+<h3 id="354-workflow-files-that-need-to-be-changed-when-making-a-new-repo">3.5.4. <strong>Workflow File's that need to be Changed when making a new repo</strong></h3>
 <ul>
 <li>You need to go through workflow file</li>
 <li>change <strong>PROJECT</strong> in each file all in <strong>lower case</strong> and no special char's ie @$%&amp;* only
@@ -332,7 +419,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="325-non-specific-workflow-automation">3.2.5. <strong>Non specific Workflow Automation</strong></h3>
+<h3 id="355-non-specific-workflow-automation">3.5.5. <strong>Non specific Workflow Automation</strong></h3>
 <ul>
 <li>
 <p><strong>build.yml 1st to run</strong></p>
@@ -385,19 +472,19 @@
 <p>relies on a config file located in the root folder called my-config.yml</p>
 </li>
 </ul>
-<h2 id="33-branching">3.3. Branching</h2>
+<h2 id="36-branching">3.6. Branching</h2>
 <p><strong>We will follow the branching format</strong></p>
 <ul>
 <li><strong>If Something needs to get added let Michael know more types can be added</strong></li>
 <li>we may be able to condense the Types</li>
 </ul>
-<h3 id="331-issues">3.3.1. <strong>Issues</strong></h3>
+<h3 id="361-issues">3.6.1. <strong>Issues</strong></h3>
 <ul>
 <li>Issue will be created by prior to a branch getting created</li>
 <li>Branch will be created off of issues</li>
 <li>When a branch is PR is approved and merged intr</li>
 </ul>
-<h3 id="332-descriptor">3.3.2. <strong>Descriptor</strong></h3>
+<h3 id="362-descriptor">3.6.2. <strong>Descriptor</strong></h3>
 <ul>
 <li>Add a short descriptor of the task</li>
 <li>This makes the branch name recognizable and easy to <strong>search</strong></li>
@@ -407,12 +494,12 @@
 <p  >
   <img width="1000" src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Branching/feature_search.png">
 </p>
-<h3 id="333-types">3.3.3. <strong>Types</strong></h3>
+<h3 id="363-types">3.6.3. <strong>Types</strong></h3>
 <ul>
 <li>This is the type of issue we are working on <strong>all in lowercase</strong></li>
 <li>This is diffrent than the labels in Github</li>
 </ul>
-<h3 id="334-default-types">3.3.4. <strong>Default types</strong></h3>
+<h3 id="364-default-types">3.6.4. <strong>Default types</strong></h3>
 <ul>
 <li><strong>feature</strong>
 <ul>
@@ -460,7 +547,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="335-branch-creation-format">3.3.5. <strong>Branch Creation Format</strong></h3>
+<h3 id="365-branch-creation-format">3.6.5. <strong>Branch Creation Format</strong></h3>
 <ul>
 <li>
 <p><strong>Type</strong>/<strong>Descriptor</strong></p>
@@ -481,7 +568,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="336-merging">3.3.6. <strong>Merging</strong></h3>
+<h3 id="366-merging">3.6.6. <strong>Merging</strong></h3>
 <ul>
 <li>There are two options when merging <strong>rebase</strong> and <strong>Squash Merge</strong>
 <ul>
@@ -590,10 +677,6 @@
  <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/PR_approved%20png.png">
 <h2 id="58-donemerged-into-main">5.8. Done/merged into main</h2>
  <img width="500"  src="https://raw.githubusercontent.com/Project-Hatchet/developers_hub/main/media/Project_board_standards/Done_Merged.png">
-<h1 id="6-setting-up-a-development-enviorment">6. Setting up a Development Enviorment</h1>
-<ul>
-<li>TODO</li>
-</ul>
 <!-- This is the code you need to align images to the left:
 
 <img  width="100" height="100" src="http://www.fillmurray.com/100/100">
