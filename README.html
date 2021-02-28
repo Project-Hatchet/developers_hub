@@ -30,43 +30,55 @@
 <h1 id="project-hatchet-studio-"><strong>Project Hatchet Studio</strong> <!-- omit in toc --></h1>
 <h2 id="table-of-contents-"><strong>Table of Contents</strong> <!-- omit in toc --></h2>
 <ul>
-<li><a href="#1-about-us">1. <strong>About Us</strong></a>
+<li><a href="#about-us"><strong>About Us</strong></a>
 <ul>
-<li><a href="#11-our-culture">1.1. <strong>Our Culture</strong></a></li>
-<li><a href="#12-benefits-to-contributing">1.2. <strong>Benefits to contributing</strong></a></li>
-<li><a href="#13-donations">1.3. <strong>Donations</strong></a></li>
-<li><a href="#14-media-on-our-projects">1.4. Media on our Projects</a></li>
+<li><a href="#our-culture"><strong>Our Culture</strong></a></li>
+<li><a href="#benefits-to-contributing"><strong>Benefits to contributing</strong></a></li>
+<li><a href="#donations"><strong>Donations</strong></a></li>
+<li><a href="#media-on-our-projects">Media on our Projects</a></li>
 </ul>
 </li>
-<li><a href="#2-developers">2. <strong>Developers</strong></a>
+<li><a href="#new-members"><strong>New Members</strong></a>
 <ul>
-<li><a href="#21-ace-coding-standards">2.1. ACE coding standards</a></li>
-<li><a href="#22-project-standards">2.2. Project standards</a>
-<ul>
-<li><a href="#221-makepy">2.2.1. make.py</a></li>
-<li><a href="#222-makecfg">2.2.2. make.cfg</a></li>
-<li><a href="#223-setuppy">2.2.3. Setup.py</a></li>
+<li><a href="#member-standards">Member standards</a></li>
+<li><a href="#project-sync-ups">Project sync ups</a></li>
+<li><a href="#creating-documenting">Creating Documenting</a></li>
+<li><a href="#where-to-start">Where to start</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#3-documenting-the-automation-the-workflow">3. <strong>Documenting the automation the workflow</strong></a>
+<li><a href="#developers"><strong>Developers</strong></a>
 <ul>
-<li><a href="#301-buildyml-1st-to-run">3.0.1. <strong>build.yml 1st to run</strong></a></li>
-<li><a href="#302-release_devyml">3.0.2. <strong>release_dev.yml</strong></a></li>
-<li><a href="#303-release_rcyml">3.0.3. <strong>release_rc.yml</strong></a></li>
-<li><a href="#304-release_mainyml">3.0.4. <strong>release_main.yml</strong></a></li>
-<li><a href="#305-release-drafteryml">3.0.5. <strong>release-drafter.yml</strong></a></li>
-</ul>
-</li>
-<li><a href="#4-release-and-automation">4. Release and Automation</a>
+<li><a href="#ace-coding-standards">ACE coding standards</a></li>
+<li><a href="#project-standards">Project standards</a>
 <ul>
-<li><a href="#41-branching">4.1. Branching</a></li>
+<li><a href="#makepy">make.py</a></li>
+<li><a href="#makecfg">make.cfg</a></li>
+<li><a href="#setuppy">Setup.py</a></li>
+<li><a href="#workflow-files-that-need-to-be-changed-when-making-a-new-repo"><strong>Workflow File's that need to be Changed when making a new repo</strong></a></li>
+<li><a href="#non-specific-workflow-automation"><strong>Non specific Workflow Automation</strong></a></li>
 </ul>
 </li>
-<li><a href="#5-setting-up-a-development-enviorment">5. Setting up a Development Enviorment</a></li>
+<li><a href="#branching">Branching</a></li>
 </ul>
-<h1 id="1-about-us">1. <strong>About Us</strong></h1>
+</li>
+<li><a href="#internal-testing">Internal Testing</a>
+<ul>
+<li><a href="#release_devyml"><strong>release_dev.yml</strong></a></li>
+</ul>
+</li>
+<li><a href="#release-candidate">Release Candidate</a>
+<ul>
+<li><a href="#release_rcyml"><strong>release_rc.yml</strong></a></li>
+</ul>
+</li>
+<li><a href="#main-release">main release</a>
+<ul>
+<li><a href="#release_mainyml"><strong>release_main.yml</strong></a></li>
+</ul>
+</li>
+<li><a href="#setting-up-a-development-enviorment">Setting up a Development Enviorment</a></li>
+</ul>
+<h1 id="about-us"><strong>About Us</strong></h1>
 <ul>
 <li>
 <p>A few Arma mod developers got together in 2021 and started the open-source Project Hatchet Studio because we noticed a lack of quality interactive vehicle interiors and a lack of understanding of HUD elements. Arma 3 community. The actual Hatchet Project has been in development since 2018, with the original project the <a href="https://forums.bohemia.net/forums/topic/223859-h-60-interactive-blackhawk-pack-public-beta-03-released-development-restarted-join-our-discord/">h-60</a></p>
@@ -78,7 +90,7 @@
 <p>Our vision is to make the most functional aircraft and ground vehicle that has ever been made in Arma, incorporating all of the lessons learned over the years. Our scope is modeling realistic vehicle interior interiors and cockpits that are fully interactive with clickable cockpits. We will focus on quality over mass production. We plan to achieve this by making all of our projects open-source and recruiting developers that share our vision (and are as sick as I am of blowing up randomly in modded helicopters while landing as I am ). We will focus on training and guiding new members through the difficulties of navigating modding in Arma. The end state of our project is educating and spreading knowledge across the multiple projects running simultaneously.</p>
 </li>
 </ul>
-<h2 id="11-our-culture">1.1. <strong>Our Culture</strong></h2>
+<h2 id="our-culture"><strong>Our Culture</strong></h2>
 <ul>
 <li>
 <p>Real-life priorities need to take precedence first, Family, School, Work, and Mental Health.</p>
@@ -96,7 +108,7 @@
 <p>If you need a break, let us know in Discord; it is acceptable to walk away from the project for six months or a year. Take the time you need. Just know someone will be reaching to you via Discord to check up on you and make sure you are okay.</p>
 </li>
 </ul>
-<h2 id="12-benefits-to-contributing">1.2. <strong>Benefits to contributing</strong></h2>
+<h2 id="benefits-to-contributing"><strong>Benefits to contributing</strong></h2>
 <ul>
 <li>Make better assets for the Arma community.</li>
 <li>Learn a new skill or get better at an existing one.</li>
@@ -104,7 +116,7 @@
 <li>Use this for you CV and required job experience and build your reputation in your skill set.</li>
 <li>Personal satisfaction</li>
 </ul>
-<h2 id="13-donations">1.3. <strong>Donations</strong></h2>
+<h2 id="donations"><strong>Donations</strong></h2>
 <ul>
 <li>
 <p>Time is the most valuable asset you can give, so we want to thank you for helping us along with our journey to complete our vision.</p>
@@ -122,27 +134,142 @@
 <p>If you have any suggestions to save us money feel free to let us know. We are looking at the possibility of creating a Patreon account, but we are too early in the process of creating the studio to worry about individual developer donations.</p>
 </li>
 </ul>
-<h2 id="14-media-on-our-projects">1.4. Media on our Projects</h2>
+<h2 id="media-on-our-projects">Media on our Projects</h2>
 <ol>
 <li><a href="https://forums.bohemia.net/forums/topic/223859-h-60-interactive-blackhawk-pack-hh-60-pave-hawk-rescue-hoist/">Bohemia Post</a></li>
 <li><a href="https://www.helisimmer.com/news/arma-iii-uh-60m-interactive-blackhawk">Helisimmer Article</a></li>
 <li><a href="https://www.youtube.com/watch?v=O5s4fXX1zZ0&amp;feature=emb_lo">Current in-game video</a></li>
 </ol>
-<h1 id="2-developers">2. <strong>Developers</strong></h1>
-<h2 id="21-ace-coding-standards">2.1. ACE coding standards</h2>
+<h1 id="new-members"><strong>New Members</strong></h1>
+<h2 id="member-standards">Member standards</h2>
+<ul>
+<li>Comunication works both ways</li>
+<li>We can not solve an issue that we do not know about</li>
+<li>Every opinion maters in the team from the most senior to newest member.</li>
+<li><strong>Focus on finding a something productive to do, find something to improve.</strong></li>
+<li>This Team is not for recognition, its to build the best Aircraft Arma has ever seen.</li>
+<li><strong>Do not wait to be told what to do seek a task out and do it.</strong></li>
+<li>Show results early and often, that is what the dev channel is there for.</li>
+<li>Bad news doesn't get better with time.</li>
+</ul>
+<h2 id="project-sync-ups">Project sync ups</h2>
+<ul>
+<li>
+<p>Getting the team together regularly to check progress, ask questions, and address any issues is another good way to keep everyone on track and assure that all team members are aware of their responsibilities in the project.</p>
+</li>
+<li>
+<p>Make sure that the entire team knows the scope of the project and that each team member is clear about exactly what is expected of them.</p>
+</li>
+<li>
+<p>No one can effectively complete an assignment if they are unsure what tasks they are responsible for</p>
+</li>
+</ul>
+<h2 id="creating-documenting">Creating Documenting</h2>
+<ul>
+<li>
+<p>You may  have implemented the most sophisticated system in the in all of arma, if its not documented both for users and developers no one will know about it or how it works.</p>
+</li>
+<li>
+<p>Make documentation for each repository, both for users and developers, feel free to steal from this and use as much as possible.</p>
+</li>
+<li>
+<p>Make an end use guide AKA how to use every system and key binding</p>
+</li>
+</ul>
+<h2 id="where-to-start">Where to start</h2>
+<ul>
+<li>Read this documentation</li>
+<li>Figure out how you want to contribute and communicate this in the discord under the developer chat.
+<ul>
+<li>
+<p><strong>3D Modeling</strong></p>
+<ul>
+<li>Vehicle Creation</li>
+<li>Vehicle Editing</li>
+<li>ordnance Creation</li>
+<li>Additional Vehicle parts</li>
+<li>Getting Game ready</li>
+<li>Baking</li>
+<li>Encoding (Object builder, Blender )</li>
+<li>UV Unwrapping</li>
+</ul>
+</li>
+<li>
+<p><strong>Scripting</strong></p>
+<ul>
+<li>Scripting new functionality</li>
+<li>Writing configs</li>
+<li>Model Encoding (Object builder)</li>
+<li>Rvmat Expert</li>
+</ul>
+</li>
+<li>
+<p><strong>Grapic designing</strong></p>
+<ul>
+<li>Designing logos</li>
+<li>Branding</li>
+<li>3D Texture work</li>
+<li>Substance Painter</li>
+<li>2D Texturing (Rvmat)</li>
+</ul>
+</li>
+<li>
+<p><strong>Animating</strong></p>
+<ul>
+<li>Parts of models</li>
+<li>Animation of Character Positions Inside Vehicles</li>
+</ul>
+</li>
+<li>
+<p><strong>Programming</strong></p>
+<ul>
+<li>Internal tools for development</li>
+<li>CI/CD</li>
+<li>.DLL creation</li>
+<li>PhysX Expert</li>
+</ul>
+</li>
+<li>
+<p><strong>Video Content Creators</strong></p>
+<ul>
+<li>Video Encoding</li>
+<li>YouTube Content Creators</li>
+<li>Streamers</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation</strong> ( everybody's least favorite topic)</p>
+<ul>
+<li>Creating</li>
+<li>Maintaining</li>
+<li>validating</li>
+</ul>
+</li>
+<li>
+<p><strong>Future roles</strong></p>
+<ul>
+<li>Leadership roles</li>
+<li>Marketing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="developers"><strong>Developers</strong></h1>
+<h2 id="ace-coding-standards">ACE coding standards</h2>
 <ul>
 <li>We use ACE coding standards which can be <a href="https://ace3mod.com/wiki/development/coding-guidelines.html">here</a></li>
 <li>We use ACE development Enviorment for experienced Arma developers <a href="https://ace3mod.com/wiki/development/setting-up-the-development-environment.html">here</a>
 <ul>
-<li>For less experienced developers there we will have a through guide farther down.</li>
+<li>For less experienced developers there we will have a through guide further down.</li>
 </ul>
 </li>
 </ul>
-<h2 id="22-project-standards">2.2. Project standards</h2>
+<h2 id="project-standards">Project standards</h2>
 <ul>
-<li>Replace <strong>PROJECT</strong> in each file all in <strong>lower case</strong> and no special char's ie @$%&amp;* only</li>
+<li>Replace the placeholder <strong>PROJECT</strong> in each file all in <strong>lower case</strong> and no special char's ie @$%&amp;* only</li>
 </ul>
-<h3 id="221-makepy">2.2.1. <a href="http://make.py">make.py</a></h3>
+<h3 id="makepy"><a href="http://make.py">make.py</a></h3>
 <ul>
 <li>project = &quot;@hatchet_PROJECT&quot;</li>
 <li>key_name = &quot;hatchet_PROJECT&quot;</li>
@@ -151,7 +278,7 @@
 <li>MAINPREFIX = &quot;z&quot;</li>
 <li>PREFIX = &quot;hatchet_PROJECT_&quot;</li>
 </ul>
-<h3 id="222-makecfg">2.2.2. make.cfg</h3>
+<h3 id="makecfg">make.cfg</h3>
 <ul>
 <li>project = @hatchet_PROJECT</li>
 <li>prefix = z\hatchet_PROJECT\addons</li>
@@ -162,18 +289,15 @@
 <li>-zipPrefix = hatchet_PROJECT</li>
 <li>build_tool = pboproject</li>
 </ul>
-<h3 id="223-setuppy">2.2.3. <a href="http://Setup.py">Setup.py</a></h3>
+<h3 id="setuppy"><a href="http://Setup.py">Setup.py</a></h3>
 <p>MAINDIR = &quot;z&quot;</p>
 <p>PROJECTDIR = &quot;hatchet_PROJECT&quot;</p>
 <p>CBA = &quot;P:\x\CBA_A3&quot;</p>
 <p>ACE = &quot;P:\z\ACE3&quot;</p>
-<h1 id="3-documenting-the-automation-the-workflow">3. <strong>Documenting the automation the workflow</strong></h1>
+<h3 id="workflow-files-that-need-to-be-changed-when-making-a-new-repo"><strong>Workflow File's that need to be Changed when making a new repo</strong></h3>
 <ul>
-<li>
-<p>You need to go through workflow file</p>
-</li>
-<li>
-<p>change <strong>PROJECT</strong> in each file all in <strong>lower case</strong> and no special char's ie @$%&amp;* only</p>
+<li>You need to go through workflow file</li>
+<li>change <strong>PROJECT</strong> in each file all in <strong>lower case</strong> and no special char's ie @$%&amp;* only
 <ul>
 <li>release_dev.yml hatchet_PROJECT_dev</li>
 <li>release_main.yml hatchet_PROJECT_main</li>
@@ -181,7 +305,10 @@
 </ul>
 </li>
 </ul>
-<h3 id="301-buildyml-1st-to-run">3.0.1. <strong>build.yml 1st to run</strong></h3>
+<h3 id="non-specific-workflow-automation"><strong>Non specific Workflow Automation</strong></h3>
+<ul>
+<li>
+<p><strong>build.yml 1st to run</strong></p>
 <ul>
 <li>runs when pull requests to main branch</li>
 <li>it does a lint check
@@ -211,36 +338,35 @@
 </ol>
 </li>
 </ol>
-<h3 id="302-release_devyml">3.0.2. <strong>release_dev.yml</strong></h3>
-<ul>
-<li>on push to main branch</li>
-<li>builds addons with HEMTT</li>
-<li>builds addons with HEMTT</li>
-<li>Extracts the mods zip</li>
-<li>Uploads to steam workshop</li>
-<li>Only available to friends of the steam page</li>
+</li>
+<li>
+<p><strong>release-drafter.yml</strong></p>
+</li>
+<li>
+<p>Updates the change log</p>
+</li>
+<li>
+<p>Based on Labels</p>
+</li>
+<li>
+<p>Labels description's tell what part the tags update</p>
+</li>
+<li>
+<p>Read the issue labels</p>
+</li>
+<li>
+<p>relies on a config file located in the root folder called my-config.yml</p>
+</li>
 </ul>
-<h3 id="303-release_rcyml">3.0.3. <strong>release_rc.yml</strong></h3>
+<h2 id="branching">Branching</h2>
+<p><strong>We will follow the branching format</strong></p>
 <ul>
-<li>Build triggered by tag rc-v0.0.0</li>
-<li>uploads public test version to the steam workshop</li>
+<li>
+<p><strong>If Something needs to get added let Michael know more types can be added</strong></p>
+<ul>
+<li>we may be able to condence the Types</li>
 </ul>
-<h3 id="304-release_mainyml">3.0.4. <strong>release_main.yml</strong></h3>
-<ul>
-<li>Build triggered by tag v0.0.0</li>
-<li>builds stable version and uploads to steam</li>
-</ul>
-<h3 id="305-release-drafteryml">3.0.5. <strong>release-drafter.yml</strong></h3>
-<ul>
-<li>Updates the change log</li>
-<li>Based on Labels</li>
-<li>Labels description's tell what part the tags update</li>
-<li>Read the issue labels</li>
-<li>relies on a config file located in the root folder called my-config.yml</li>
-</ul>
-<h1 id="4-release-and-automation">4. Release and Automation</h1>
-<h2 id="41-branching">4.1. Branching</h2>
-<ul>
+</li>
 <li>
 <h3 id="issues">Issues</h3>
 <ul>
@@ -250,10 +376,131 @@
 <li>
 <p>Branch will be created off of issues</p>
 </li>
+<li>
+<p>When a branch is PR is approved and merged intr</p>
+</li>
+<li>
+<p><strong>Descriptor</strong></p>
+<ul>
+<li>Add a short descriptor of the task</li>
+<li>This makes the branch name recognizable and easy to search</li>
+<li>In descriptor we will use hyphens - to use instead of white space
+<ul>
+<li><strong>Note: This is only git/github and will not be used in code</strong></li>
 </ul>
 </li>
 </ul>
-<h1 id="5-setting-up-a-development-enviorment">5. Setting up a Development Enviorment</h1>
+</li>
+<li>
+<p>Types</p>
+<ul>
+<li>
+<p>This is the type of issue we are working on <strong>all in lowercase</strong></p>
+</li>
+<li>
+<p>This is diffrent than the labels in Github</p>
+</li>
+<li>
+<p>Default types</p>
+<ul>
+<li>feature
+<ul>
+<li>Adding a new feature</li>
+</ul>
+</li>
+<li>bugfix
+<ul>
+<li>A fix for a bug</li>
+</ul>
+</li>
+<li>documentation
+<ul>
+<li>Adding or updating documentation</li>
+</ul>
+</li>
+<li>hotfix
+<ul>
+<li>critical bug fix</li>
+</ul>
+</li>
+<li>devops
+<ul>
+<li>updating a tool or workflow not related to</li>
+</ul>
+</li>
+<li>model
+<ul>
+<li>an update to a model</li>
+</ul>
+</li>
+<li>texture
+<ul>
+<li>update to texture or rvmat</li>
+</ul>
+</li>
+<li>refactor
+<ul>
+<li>refactor of code to improve</li>
+</ul>
+</li>
+<li><strong>release</strong>
+<ul>
+<li>Need to ask about this  could be useful</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Branch Creation Format</p>
+<ul>
+<li>
+<p>Type/Descriptor</p>
+</li>
+<li>
+<p>Good examples</p>
+<ul>
+<li>bugfix/dampeners</li>
+<li>feature/overhaul-flir-system</li>
+<li>feature/open-inspector</li>
+</ul>
+</li>
+<li>
+<p>Bad examples</p>
+<ul>
+<li>version1-breakpoint1</li>
+<li>update-electron-comparison</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="internal-testing">Internal Testing</h1>
+<h3 id="release_devyml"><strong>release_dev.yml</strong></h3>
+<ul>
+<li>on push to main branch</li>
+<li>builds addons with HEMTT</li>
+<li>builds addons with HEMTT</li>
+<li>Extracts the mods zip</li>
+<li>Uploads to steam workshop</li>
+<li>Only available to friends of the steam page</li>
+</ul>
+<h1 id="release-candidate">Release Candidate</h1>
+<h3 id="release_rcyml"><strong>release_rc.yml</strong></h3>
+<ul>
+<li>Build triggered by tag rc-v0.0.0</li>
+<li>uploads public test version to the steam workshop</li>
+</ul>
+<h1 id="main-release">main release</h1>
+<h3 id="release_mainyml"><strong>release_main.yml</strong></h3>
+<ul>
+<li>Build triggered by tag v0.0.0</li>
+<li>builds stable version and uploads to steam</li>
+</ul>
+<h1 id="setting-up-a-development-enviorment">Setting up a Development Enviorment</h1>
 <!-- This is the code you need to align images to the left:
 
 <img align="left" width="100" height="100" src="http://www.fillmurray.com/100/100">
